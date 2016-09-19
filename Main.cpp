@@ -350,7 +350,7 @@ int main(int argc, char const *argv[])
 						cout<< i << ".-"<<arti->toString()<<endl;
 					}
 
-					cout<< "Ingrese la posicion del articulo a borrar"endl << "...";
+					cout<< "Ingrese la posicion del articulo a borrar"<<endl << "...";
 
 					int posicion = 0;
 					cin>> posicion;
@@ -407,6 +407,18 @@ int main(int argc, char const *argv[])
 					cout<< "Desea Continuar!? 0/1"<< endl << "...";
 					cin>> resp;
 				}
+
+				int total = 0;
+				for (int i = 0; i < Carrito.size(); ++i)
+				{
+					cout<< i<< ".-" << Carrito[i]<< endl;
+					total = total + Carrito[i]->getPrecio();
+				}
+
+				cout<< "El total del producto es: " << total;
+
+				cout<< "Gracias Por su compra!"<<endl;
+
 				break;
 			}
 
